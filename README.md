@@ -10,7 +10,7 @@
 3. [Course Labs](#course-labs)
    - [Course 1 - Loading and Saving Keypairs](#course-1---loading-and-saving-keypairs)
    - [Course 2 - Using Solana Devnet](#course-2---using-solana-devnet)
-   - [Course 3](#course-3)
+   - [Course 3 - Transactions](#course-3---transactions)
 4. [Project](#project)
 
 ---
@@ -66,6 +66,7 @@ SECRET_KEY="[
 npx esrun load-keypair.ts
 ```
 
+
 ### Course 2 - Using Solana Devnet
 
 **Dependencies**
@@ -76,7 +77,7 @@ npx esrun load-keypair.ts
 1. Install dependencies
 ```bash
 npm install
- ```
+```
 
 2. Checking account balance using Solana CLI
 ```bash
@@ -95,11 +96,31 @@ solana config set --url https://api.devnet.solana.com
 ```
 
 
+### Course 3 - Transactions
+
+**Dependencies:**
+- @solana/web3.js
+- @solana-developers/helpers
+- @solana/spl-memo
+- esrun
+- dotenv
+
+1. Install dependencies
+```bash
+npm install
+```
+
+2. Send airdrop to sender public key using [Solana Devnet Faucet]("https://faucet.solana.com") or *check-balance.ts* from [Course 2 - Using Solana Devnet](#course-2---using-solana-devnet)
+
+3. Run transfer script
+```bash
+npx esrun transfer.ts
+```
+
+**Utils**
+- Accounts, Transactions, Programs, Tokens, Blocks can be checked out at [Solana Explorer]("https://explorer.solana.com")
 
 
-### Course 3
-
-TBA
 
 ## Project
 
