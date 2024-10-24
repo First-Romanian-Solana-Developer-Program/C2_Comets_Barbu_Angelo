@@ -6,7 +6,7 @@ const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
 console.log("Connected to devnet!", connection.rpcEndpoint);
 
-const publicKey = new PublicKey("65iHwGLu5SJjGfKRACwn28f4PJ15uWureEaFTUPKiBQ2");
+const publicKey = new PublicKey("BMdqZbo8oJrHRps5SBvyJGSF7BCa6CNxgA7piumsxAim");
 
 const balanceInLamports = await connection.getBalance(publicKey);
 

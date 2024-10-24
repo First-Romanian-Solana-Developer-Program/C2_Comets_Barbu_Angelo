@@ -11,6 +11,8 @@
    - [Course 1 - Loading and Saving Keypairs](#course-1---loading-and-saving-keypairs)
    - [Course 2 - Using Solana Devnet](#course-2---using-solana-devnet)
    - [Course 3 - Transactions](#course-3---transactions)
+   - [Course 4 - Token Minting](#course-4---token-minting)
+   - [Course 5 - Create Token Metadata](#course-5---create-token-metadata)
 4. [Project](#project)
 
 ---
@@ -73,6 +75,7 @@ npx esrun load-keypair.ts
 - @solana-developers/helpers
 - @solana/web3.js
 - esrun
+- dotenv
 
 1. Install dependencies
 ```bash
@@ -119,6 +122,79 @@ npx esrun transfer.ts
 
 **Utils**
 - Accounts, Transactions, Programs, Tokens, Blocks can be checked out at [Solana Explorer]("https://explorer.solana.com")
+
+
+### Course 4 - Token Minting
+
+**Dependencies:**
+- @solana/web3.js
+- @solana-developers/helpers
+- @solana/spl-token
+- esrun
+- dotenv
+
+1. Install dependencies
+```bash
+npm install
+```
+
+2. Create Token Mint
+```bash
+npx esrun create-token-mint.ts
+```
+
+3. Create a destination token account owned by another account
+```bash
+npx esrun create-token-account.ts
+```
+
+4. Mint tokens to the destination token account created previously
+```bash
+npx esrun mint-tokens.ts
+```
+
+5. Transfer tokens from one account to another
+```bash
+npx esrun mint-tokens.ts
+```
+
+- **Note: Important Public Keys**
+```
+TOKEN_MINT: "CzbDpanY5DBcMGwPETdm1N82cZ8cFMLj6NpwMFaXXLLW"
+MINT_AUTHORITY: "65iHwGLu5SJjGfKRACwn28f4PJ15uWureEaFTUPKiBQ2"
+
+SRC_ACCOUNT: "GENC37uWEWWKTitsUSDu4hth9xC7yUwxxN45oYbWYngn"
+SRC_TOKEN_ACCOUNT: "2N5BAGtJqaEkPWLeNHKYDS5tha5Wouerzzm4DEARhPj7"
+DST_ACCOUNT: "BMdqZbo8oJrHRps5SBvyJGSF7BCa6CNxgA7piumsxAim"
+DST_TOKEN_ACCOUNT: "EvjmoASQ55j9jVAo1FBVz2wkKa3jwsveibhvd46tfUN5"
+```
+- Important Secret Keys available in .env file 
+
+
+### Course 5 - Create Token Metadata
+**Dependencies:**
+- @metaplex-foundation/mpl-token-metadata
+- @metaplex-foundation/umi-bundle-defaults
+- @metaplex-foundation/umi-uploader-irys
+- @solana/web3.js ^1.95.4
+- @solana-developers/helpers
+- esrun
+- dotenv
+
+**Contents:**
+- *upload-image.ts* uploads the image off-chain and gets the URI
+- *upload-metadata.ts* uploads the NFT's metadata offchain and gets the metadata's URI
+- *mint-nft* mints the NFT containing the data, the metadata and the image for the NFT on-chain and gets the transaction ID
+- *index.ts* mainfile used to call all the implemented functions and successfully mint the NFT
+
+1. Install dependencies
+```bash
+npm install
+```
+2. Run the main script
+```bash
+npx esrun index.ts
+```
 
 
 
