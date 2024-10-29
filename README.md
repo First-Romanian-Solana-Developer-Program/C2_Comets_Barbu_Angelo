@@ -13,6 +13,7 @@
    - [Course 3 - Transactions](#course-3---transactions)
    - [Course 4 - Token Minting](#course-4---token-minting)
    - [Course 5 - Create Token Metadata](#course-5---create-token-metadata)
+   - [Course 6 - Rust](#course-6---rust)
 4. [Project](#project)
 
 ---
@@ -194,6 +195,27 @@ npm install
 2. Run the main script
 ```bash
 npx esrun index.ts
+```
+
+
+### Course 6 - Rust
+**Dependencies:**
+- rust
+- cargo
+- rustlings
+
+**Contents:**
+- rustlings exercises finished from 00_intro to 09_strings.
+
+1. Install and initialise rustlings
+```bash
+   cargo install rustlings
+   rustlings init
+```
+
+2. Run rustlings to see exercises' progress
+```bash
+rustlings
 ```
 
 
