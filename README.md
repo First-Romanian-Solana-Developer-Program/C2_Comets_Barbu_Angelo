@@ -270,8 +270,7 @@ npx esrun index.ts
 ---
 
 **Contents:**
-- rustlings exercises finished from 00_intro to 09_strings.
-- In case rustlings doesn't work, exercises' solutions can be found in *exercises* folder.
+- rustlings exercises finished from *00_intro* to *09_strings* (including *quiz1*).
 
 ---
 
