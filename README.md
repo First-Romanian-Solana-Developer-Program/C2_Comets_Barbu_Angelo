@@ -15,6 +15,7 @@
    - [Course 5 - Creating Token Metadata](#course-5---creating-token-metadata)
    - [Course 6 - Introduction to Rust](#course-6---introduction-to-rust)
    - [Course 7 - Local Program Development](#course-7---local-program-development)
+   - [Course 8 - On-Chain Programming](#course-8---on-chain-programming)
 4. [Project](#project)
 
 ---
@@ -341,6 +342,29 @@ rustlings
 >*Note*: Make sure your **Anchor.toml** cluster provider is *devnet* or use the flag *--provider.cluster devnet*.
 
 <br> <br>
+
+## Course 8 - On-Chain Programming
+**Dependencies:**
+- Rust
+- Anchor
+- Solana CLI
+- Yarn
+
+---
+
+**Notes & Contents:**
+- Downgrade to Solana 1.18.25 to have no issues with commands such as *anchor-build*, *solana-keygen* etc.
+- Simple Solana Program that sets account's favorites and tests the method
+
+---
+
+**Commands:**
+1. Run the test
+```bash
+   anchor test
+```
+
+
 
 
 <br> <br> <br>
