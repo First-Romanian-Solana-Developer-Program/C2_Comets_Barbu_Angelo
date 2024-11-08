@@ -16,6 +16,7 @@
    - [Course 6 - Introduction to Rust](#course-6---introduction-to-rust)
    - [Course 7 - Local Program Development](#course-7---local-program-development)
    - [Course 8 - On-Chain Programming](#course-8---on-chain-programming)
+   - [Course 9 - Anchor and Tokens](#course-9---anchor-and-tokens)
 4. [Project](#project)
 
 ---
@@ -364,7 +365,42 @@ rustlings
    anchor test
 ```
 
+<br> <br>
 
+## Course 9 - Anchor and Tokens
+**Dependencies:**
+- Rust
+- Anchor
+- Solana CLI
+- Yarn
+- @solana-developers/helpers
+- @solana/spl-token
+
+---
+
+**Notes & Contents:**
+- Downgrade to Solana 1.18.25 to have no issues with commands such as *anchor-build*, *solana-keygen* etc.
+- Simple Solana Program that sets account's favorites and tests the method
+
+---
+
+**Commands:**
+1. Initialise Anchor project
+```bash
+   anchor init escrow --template=multiple
+```
+
+2. Install NPM dependencies
+```bash
+   npm install
+```
+
+3. Run the tests
+```bash
+   anchor test
+```
+
+<br> <br>
 
 
 <br> <br> <br>
