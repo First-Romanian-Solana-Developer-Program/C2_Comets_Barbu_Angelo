@@ -16,8 +16,8 @@
    - [Course 6 - Introduction to Rust](#course-6---introduction-to-rust)
    - [Course 7 - Local Program Development](#course-7---local-program-development)
    - [Course 8 - On-Chain Programming](#course-8---on-chain-programming)
-   - [Course 9 - Anchor and Tokens](#course-9---anchor-and-tokens)
-4. [Project](#project)
+   - [Course 9 - 10 - Anchor and Tokens](#course-9---10---anchor-and-tokens)
+   - [Course 11 - Wallets and Frontend Development](#course-11---wallets-and-frontend-development)
 
 ---
 
@@ -367,7 +367,7 @@ rustlings
 
 <br> <br>
 
-## Course 9 - Anchor and Tokens
+## Course 9 - 10 - Anchor and Tokens
 **Dependencies:**
 - Rust
 - Anchor
@@ -380,7 +380,7 @@ rustlings
 
 **Notes & Contents:**
 - Downgrade to Solana 1.18.25 to have no issues with commands such as *anchor-build*, *solana-keygen* etc.
-- Simple Solana Program that sets account's favorites and tests the method
+- Solana Program working as an escrow that mediates the transfer between two entities that want to exchange tokens.
 
 ---
 
@@ -402,13 +402,38 @@ rustlings
 
 <br> <br>
 
-
-<br> <br> <br>
+## Course 11 - Wallets and Frontend Development
+**Dependencies:**
+- Next.js
+- React.js
+- "@solana/web3.js"
+- "@solana/wallet-adapter" libraries
 
 ---
 
-# Project
+**Notes & Contents:**
+- NextJs project cloned from [this repository.](https://github.com/danielpavel/solana-ping-frontend.git)
+- Added Connect button for Solana wallet.
+- Added Bonus functionality to send amount of SOL to recipient address from the connected wallet.
 
-TBA
+---
+
+**Commands:**
+1. Install dependencies
+```bash
+   npm install
+```
+
+2. Build Next.js project
+```bash
+   npm run build
+```
+
+3. Start the project
+```bash
+   npm run start
+```
+
+>*Note:* Project is running on *localhost:3000*
 
 

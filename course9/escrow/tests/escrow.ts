@@ -79,7 +79,7 @@ describe("escrow", async () => {
         SystemProgram.transfer({
           fromPubkey: provider.publicKey,
           toPubkey: account.publicKey,
-          lamports: 10 * LAMPORTS_PER_SOL,
+          lamports: 0.1 * LAMPORTS_PER_SOL,
         })
       );
 
@@ -107,7 +107,7 @@ describe("escrow", async () => {
           mint: tokenMintB.publicKey,
           authority: bob.publicKey,
           ata: bobTokenAccountB,
-        },
+        }
       ].flatMap((mintDetails) => [
         createInitializeMint2Instruction(
           mintDetails.mint,

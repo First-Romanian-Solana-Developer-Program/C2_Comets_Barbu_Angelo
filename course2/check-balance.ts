@@ -6,19 +6,19 @@ const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
 console.log("Connected to devnet!", connection.rpcEndpoint);
 
-const publicKey = new PublicKey("BMdqZbo8oJrHRps5SBvyJGSF7BCa6CNxgA7piumsxAim");
+const publicKey = new PublicKey("5KRsoL6pQd3euiQpNHBNC73knQxKt5GXV6zo1EUu6xr2");
 
 const balanceInLamports = await connection.getBalance(publicKey);
 
 console.log("Accounts's balance in lamports:", balanceInLamports);
 
-console.log("Airdropping 1 SOL to Account...");
+console.log("Airdropping SOL to Account...");
 
 await airdropIfRequired(
     connection, 
     publicKey, 
-    1 * LAMPORTS_PER_SOL,
-    0.5 * LAMPORTS_PER_SOL
+    5 * LAMPORTS_PER_SOL,
+    4 * LAMPORTS_PER_SOL
 );
 
 console.log("Done airdropping!");

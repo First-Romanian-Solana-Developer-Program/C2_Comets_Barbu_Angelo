@@ -3,8 +3,8 @@ use anchor_lang::prelude::*;
 use anchor_spl::{
     associated_token::AssociatedToken,
     token_interface::{
-        close_account, transfer_checked, CloseAccount, Mint, TokenAccount, TokenInterface,
-        TransferChecked,
+        CloseAccount, TokenAccount, TokenInterface, TransferChecked, Mint,
+        transfer_checked, close_account
     },
 };
 
@@ -13,6 +13,7 @@ use crate::Offer;
 
 #[derive(Accounts)]
 pub struct TakeOffer<'info> {
+
     #[account(mut)]
     pub taker: Signer<'info>,
 
@@ -20,7 +21,6 @@ pub struct TakeOffer<'info> {
     pub maker: SystemAccount<'info>,
 
     pub token_mint_a: InterfaceAccount<'info, Mint>,
-
     pub token_mint_b: InterfaceAccount<'info, Mint>,
 
     #[account(
@@ -117,13 +117,13 @@ pub fn withdraw_and_close_vault(ctx: Context<TakeOffer>) -> Result<()> {
         accounts,
         &signer_seeds,
     );
-    
+
     transfer_checked(
         cpi_context,
         ctx.accounts.vault.amount,
         ctx.accounts.token_mint_a.decimals,
     )?;
-        
+
     let accounts = CloseAccount {
         account: ctx.accounts.vault.to_account_info(),
         destination: ctx.accounts.taker.to_account_info(),
@@ -135,7 +135,14 @@ pub fn withdraw_and_close_vault(ctx: Context<TakeOffer>) -> Result<()> {
         accounts,
         &signer_seeds,
     );
-    
+
     close_account(cpi_context)
+}
+
+
+pub fn process_take_offer_instruction(context: Context<TakeOffer>) -> Result<()> {
+    
+    send_wanted_tokens_to_maker(&context)?;
+    withdraw_and_close_vault(context)
     
 }
